@@ -1,0 +1,8 @@
+
+CREATE TABLE patient (
+    pid INT,
+    fname VARCHAR(50),
+    lname VARCHAR(50),
+    age INT,
+    bg VARCHAR(10)
+);

@@ -1,0 +1,23 @@
+create database Basha;
+use Basha;
+create Table Student(slno int,Name varchar(100),year int ,branch varchar(10),fee numeric );
+insert into Student values (1,"Basha",3,"CSe"); 
+insert into Student(slno,Name,year) values (1,"Basha",3); 
+select distinct Name from Student;
+UPDATE Student set fee =10000 where branch = "Cse";
+select *from Student;
+select sum(fee)from   Student;
+select slno from Student where Branch is NULL;
+ALTER table Student ADD fee numeric;
+select slno from Student where Branch is NOT NULL;
+drop table Student;
+
+select sum(fee) from Student ;
+select max(fee) from Student ;
+select min(fee) from Student ;
+select avg(fee) from Student ;
+select count(fee) from Student ;
+
+insert into Student values (1,"Basha",3,"CSe",6000);
+
+create Table Student(slno int,Name varchar(100),year int ,branch varchar(10),fee numeric );

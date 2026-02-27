@@ -1,0 +1,22 @@
+
+create table Voter (slno int,
+vid  varchar(10),
+name varchar(10) NOT NULL,
+age int unique ,
+primary key (vid),
+check (age >=18)
+);
+Desc Voter;
+alter table Voter add check (age>=18);
+alter table Voter Drop INDEX age ;
+select *from Voter;
+INSERT INTO Voter values(1,"239y1a05g6","Basha",99);
+
+
+
+
+
+
+
+
+
