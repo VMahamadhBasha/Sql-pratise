@@ -1,33 +1,28 @@
+
 use schema sql_practice;
+
 create database Practice;
+
 use Practice;
 
-create table Product(id INT,
+
+
+
+create table Product(
+id INT,
 name varchar(20),
 oprice INT,
- discount int,
- fprice int,odate date,
- edate Date,
- address varchar(100)
- );
- select *from Product Limit 5;
- 
- select distinct address from Product ;
-  select distinct discount from Product ;
+discount int,
+fprice int,
+odate date,
+edate Date,
+address varchar(100)
+);
 
-select *from Product order by discount;
-select *from Product order by discount desc;
-select *from Product order by name;
-select *from Product order by odate;
- select * from Product;
- select id,name from Product where discount>=10;
- select *from Product order by address;
- ALTER TABLE Product add column test varchar(50);
-alter table Product  drop column test;
- show desc  from  Product;
+
  
- select id,name from Product group by address;
- INSERT INTO Product (id, name, oprice, discount, fprice, odate, edate, address)
+
+INSERT INTO Product (id, name, oprice, discount, fprice, odate, edate, address)
 VALUES
 (1, 'Laptop', 60000, 10, 54000, '2026-07-01', '2028-07-01', 'Hyderabad'),
 (2, 'Mobile', 30000, 15, 25500, '2026-06-15', '2028-06-15', 'Bengaluru'),
@@ -39,5 +34,100 @@ VALUES
 (8, 'Printer', 15000, 25, 11250, '2026-01-30', '2028-01-30', 'Vijayawada'),
 (9, 'Tablet', 25000, 10, 22500, '2026-07-18', '2028-07-18', 'Visakhapatnam'),
 (10, 'Speaker', 8000, 30, 5600, '2026-06-05', '2028-06-05', 'Warangal');
+
+
  
- show tables;
+show tables;
+
+show desc from Product;
+
+
+ 
+
+select * from Product;
+
+select id,name from Product where discount>=10;
+
+
+ 
+
+select *from Product where discount>5 and fprice>20000;
+
+select *from Product where discount>50 or fprice>20000;
+
+select *from Product where address not in ("Hyderabad","Bengaluru","Visakhapatnam");
+
+
+ 
+select * from Product where address Like "%B%";
+
+select * from Product where address Like "%BE%";
+
+select *from Product where address Like "B%";
+
+
+- 
+
+select distinct address from Product;
+
+select distinct discount from Product;
+
+
+ 
+
+select *from Product Limit 5;
+
+
+ 
+
+select *from Product order by discount;
+
+select *from Product order by discount desc;
+
+select *from Product order by name;
+
+select *from Product order by odate;
+
+select *from Product order by address;
+ 
+
+select Avg(oprice) from Product;
+
+select max(oprice) from Product;
+
+select sum(oprice) from Product;
+
+select max(oprice) as MAximum,
+min(oprice) as Minimum,
+sum(oprice) as Sum
+from Product;
+
+
+ 
+
+select name from Product
+where oprice >
+(select avg(oprice) from Product);
+
+select *from Product
+where address in
+(select address from Product where address Like "%B%");
+
+ 
+
+alter table Product add column Test varchar(20);
+
+ALTER TABLE Product add column test varchar(50);
+
+
+alter table Product drop column test;
+
+desc Product;
+
+ 
+select *from Product where test is NULL;
+
+
+
+
+select id,name from Product group by address;
