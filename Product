@@ -10,7 +10,15 @@ oprice INT,
  edate Date,
  address varchar(100)
  );
+ select *from Product Limit 5;
+ 
+ select distinct address from Product ;
+  select distinct discount from Product ;
 
+select *from Product order by discount;
+select *from Product order by discount desc;
+select *from Product order by name;
+select *from Product order by odate;
  select * from Product;
  select id,name from Product where discount>=10;
  select *from Product order by address;
