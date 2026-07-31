@@ -1,0 +1,21 @@
+Complete Roadmap
+SELECT
+WHERE
+ORDER BY
+LIMIT
+DISTINCT
+Aggregate Functions (COUNT, SUM, AVG, MIN, MAX)
+GROUP BY
+HAVING
+LIKE
+IN
+BETWEEN
+IS NULL
+String Functions
+Date Functions
+Joins
+Subqueries
+Views
+Constraints (PRIMARY KEY, FOREIGN KEY, NOT NULL, UNIQUE, CHECK)
+DDL (CREATE, ALTER, DROP, TRUNCATE)
+DML (INSERT, UPDATE, DELETE)
